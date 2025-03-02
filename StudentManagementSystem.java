@@ -16,7 +16,6 @@ class Student {
         this.grade = grade;
     }
 
-    // Getters and Setters
     public String getId() { return id; }
     public String getName() { return name; }
     public int getAge() { return age; }
@@ -53,7 +52,7 @@ public class StudentManagementSystem {
             System.out.print("Choose an option: ");
 
             int choice = scanner.nextInt();
-            scanner.nextLine(); // Consume newline
+            scanner.nextLine();
 
             switch (choice) {
                 case 1: addStudent(); break;
@@ -79,12 +78,12 @@ public class StudentManagementSystem {
         String name = scanner.nextLine();
         System.out.print("Enter Age: ");
         int age = scanner.nextInt();
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine(); 
         System.out.print("Enter Course: ");
         String course = scanner.nextLine();
         System.out.print("Enter CGPA: ");
         double grade = scanner.nextDouble();
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine(); 
 
         studentRecords.put(id, new Student(id, name, age, course, grade));
         System.out.println("Student added successfully.");
@@ -107,7 +106,7 @@ public class StudentManagementSystem {
         System.out.print("Enter New Age (-1 to keep unchanged): ");
         int age = scanner.nextInt();
         if (age != -1) student.setAge(age);
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine();
 
         System.out.print("Enter New Course (leave blank to keep unchanged): ");
         String course = scanner.nextLine();
@@ -116,7 +115,7 @@ public class StudentManagementSystem {
         System.out.print("Enter New CGPA (-1 to keep unchanged): ");
         double grade = scanner.nextDouble();
         if (grade != -1) student.setGrade(grade);
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine(); 
 
         System.out.println("Student updated successfully.");
     }
